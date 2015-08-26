@@ -31,7 +31,10 @@ angular.module("../app/scripts/partials/contact-us.html", []).run(["$templateCac
 angular.module("../app/scripts/partials/header.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("../app/scripts/partials/header.html",
     "<div class=\"header\">\n" +
-    "  <div class=\"navbar navbar-default\" role=\"navigation\">\n" +
+    "  <div class=\"navbar navbar-default\" role=\"navigation\"\n" +
+    "  sn-skrollr\n" +
+    "    data-start=\"position:absolute;top:0;width:100%;background:rgba(255,255,255,0.01)\"\n" +
+    "    data-200=\"position:fixed;width:100%;background:rgba(255,255,255,1);z-index:100\">\n" +
     "      <div class=\"navbar-header\">\n" +
     "\n" +
     "        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#js-navbar-collapse\">\n" +
@@ -41,15 +44,15 @@ angular.module("../app/scripts/partials/header.html", []).run(["$templateCache",
     "          <span class=\"icon-bar\"></span>\n" +
     "        </button>\n" +
     "\n" +
-    "        <a class=\"navbar-brand\" href=\"#/\">systemsHub</a>\n" +
+    "        <a sn-skrollr data-start=\"color:rgb(255,255,255)\" data-200=\"color:rgb(105,105,105)\" class=\"navbar-brand\" href=\"#/\">systemsHub</a>\n" +
     "      </div>\n" +
     "\n" +
     "      <div class=\"collapse navbar-collapse\" id=\"js-navbar-collapse\">\n" +
     "\n" +
     "        <ul class=\"nav navbar-nav navbar-right\">\n" +
-    "          <li class=\"active\"><a href=\"#/\">ABOUT</a></li>\n" +
-    "          <li><a ng-href=\"#/about\">SERVICES</a></li>\n" +
-    "          <li><a ng-href=\"#/\">CONTACT</a></li>\n" +
+    "          <li><a sn-skrollr data-start=\"color:rgb(255,255,255)\" data-200=\"color:rgb(105,105,105)\" du-smooth-scroll du-scroll-spy href=\"#about\">ABOUT</a></li>\n" +
+    "          <li><a sn-skrollr data-start=\"color:rgb(255,255,255)\" data-200=\"color:rgb(105,105,105)\" du-smooth-scroll du-scroll-spy href=\"#services\">SERVICES</a></li>\n" +
+    "          <li><a sn-skrollr data-start=\"color:rgb(255,255,255)\" data-200=\"color:rgb(105,105,105)\" du-smooth-scroll du-scroll-spy href=\"#contact_us\">CONTACT</a></li>\n" +
     "        </ul>\n" +
     "      </div>\n" +
     "  </div>\n" +
@@ -60,9 +63,9 @@ angular.module("../app/scripts/partials/header.html", []).run(["$templateCache",
 angular.module("../app/scripts/partials/home.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("../app/scripts/partials/home.html",
     "<div ui-view=\"header\"></div>\n" +
-    "<div ui-view=\"image-banner\"></div>\n" +
-    "<div ui-view=\"services\"></div>\n" +
-    "<div ui-view=\"contact-us\"></div>\n" +
+    "<div id=\"about\" ui-view=\"image-banner\"></div>\n" +
+    "<div id=\"services\" ui-view=\"services\"></div>\n" +
+    "<div id=\"contact_us\" ui-view=\"contact-us\"></div>\n" +
     "<div ui-view=\"\"></div>\n" +
     "");
 }]);

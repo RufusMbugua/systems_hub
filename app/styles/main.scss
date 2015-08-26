@@ -12,13 +12,6 @@ $navbar-border-radius:0;
 @import "../../resources/typl8/styles";
 // endbower
 
-
-// Custom Styling
-// .header{
-//   nav{
-//     background:$dark-grey !important;
-//   }
-// }
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -105,7 +98,7 @@ body {
   margin:0 !important;
   .navbar{
     z-index: 20;
-    @extend .typl8-delta;
+    @extend .typl8-epsilon;
     position:absolute;
     top:0;
     width: 100%;
