@@ -1,0 +1,179 @@
+$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+// Colors
+$dark-grey:#cdcdcd;
+$light-grey:#dddddd;
+$navbar-default-bg: transparent;
+$navbar-default-link-color:white;
+$navbar-default-link-active-color:black;
+$navbar-border-radius:0;
+
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../resources/typl8/styles";
+// endbower
+
+
+// Custom Styling
+// .header{
+//   nav{
+//     background:$dark-grey !important;
+//   }
+// }
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  font-weight: OpenSansRegular !important;
+  background: $light-grey !important;
+}
+.container{
+  padding:0 10%;
+  width:auto !important;
+  .row{
+    background:white;
+  }
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  // .container {
+  //   max-width: 730px;
+  // }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.header{
+  margin:0 !important;
+  .navbar{
+    z-index: 20;
+    @extend .typl8-delta;
+    position:absolute;
+    top:0;
+    width: 100%;
+    margin:0 !important;
+  }
+}
+footer{
+  @extend .typl8-epsilon;
+  margin:20px 0;
+  padding:20px;
+  background:#e74c3c;
+  color:white;
+}
+.layer{
+  position: relative;
+  img{
+    width:100%;
+  }
+  h4,p{
+    color:white;
+    position:absolute;
+    width:100%;
+    text-align: center;
+  }
+  h4{
+    top:10%;
+  }
+  p{
+    top:40%;
+    @extend .typl8-gamma;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  text-align: center;
+  color:#333;
+}
+h5.white{
+  background: white;
+  padding:10px;
+}
+.flushed{
+  padding:0 !important;
+  .layer{
+    position:relative;
+    height:30em;
+    .mask{
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      opacity:0.5;
+    }
+    .mask.blue{
+      background:blue;
+    }
+    .mask.red{
+      background:red;
+    }
+  }
+}
+.btn.centered{
+  @extend .typl8-epsilon;
+  margin: 10px auto;
+  width:100%;
+}
+p.centered{
+  text-align: center;
+  text-indent: 0 !important;
+  width:100%;
+}

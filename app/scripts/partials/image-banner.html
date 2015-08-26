@@ -1,0 +1,10 @@
+<div slick dots=true infinite=true speed=300 slides-to-show=1 touch-move=true slides-to-scroll=1>
+    <div ng-repeat="image in images">
+      <div class="layer">
+        <div class="green mask">  </div>
+        <img ng-src="{{image.src}}" class="img-responsive" alt="">
+        <h4 ng-bind="image.header"></h4>
+        <p ng-bind="image.description"></p>
+      </div>
+    </div>
+</div>

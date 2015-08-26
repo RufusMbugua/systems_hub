@@ -1,0 +1,132 @@
+angular.module('templates-dist', ['../app/scripts/partials/contact-us.html', '../app/scripts/partials/header.html', '../app/scripts/partials/home.html', '../app/scripts/partials/image-banner.html', '../app/scripts/partials/services.html']);
+
+angular.module("../app/scripts/partials/contact-us.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("../app/scripts/partials/contact-us.html",
+    "<div class=\"container\">\n" +
+    "  <div class=\"row\">\n" +
+    "    <h4>Contact Us</h4>\n" +
+    "    <div class=\"col-md-12 flushed\">\n" +
+    "      <h4>Map will be Attached Here</h4>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-12 flushed\">\n" +
+    "      <p class=\"centered\" >P.O Box 100018 – 00101 Nairobi.</p>\n" +
+    "      <p class=\"centered\" >Tel: 0721351898 / 0732942181</p>\n" +
+    "      <p class=\"centered\" >Email: info@systemshub.co.ke</p>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-6 flushed\">\n" +
+    "      <p class=\"centered\">Steve M. Mwenda</p>\n" +
+    "      <p class=\"centered\">Tel: 0721351898</p>\n" +
+    "      <p class=\"centered\">Email: smwenda@systemshub.co.ke</p>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-6 flushed\">\n" +
+    "      <p class=\"centered\">George K. Muiruri</p>\n" +
+    "      <p class=\"centered\">Tel: 0732942181</p>\n" +
+    "      <p class=\"centered\">Email: gkahinga@systemshub.co.ke</p>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "");
+}]);
+
+angular.module("../app/scripts/partials/header.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("../app/scripts/partials/header.html",
+    "<div class=\"header\">\n" +
+    "  <div class=\"navbar navbar-default\" role=\"navigation\">\n" +
+    "      <div class=\"navbar-header\">\n" +
+    "\n" +
+    "        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#js-navbar-collapse\">\n" +
+    "          <span class=\"sr-only\">Toggle navigation</span>\n" +
+    "          <span class=\"icon-bar\"></span>\n" +
+    "          <span class=\"icon-bar\"></span>\n" +
+    "          <span class=\"icon-bar\"></span>\n" +
+    "        </button>\n" +
+    "\n" +
+    "        <a class=\"navbar-brand\" href=\"#/\">systemsHub</a>\n" +
+    "      </div>\n" +
+    "\n" +
+    "      <div class=\"collapse navbar-collapse\" id=\"js-navbar-collapse\">\n" +
+    "\n" +
+    "        <ul class=\"nav navbar-nav navbar-right\">\n" +
+    "          <li class=\"active\"><a href=\"#/\">ABOUT</a></li>\n" +
+    "          <li><a ng-href=\"#/about\">SERVICES</a></li>\n" +
+    "          <li><a ng-href=\"#/\">CONTACT</a></li>\n" +
+    "        </ul>\n" +
+    "      </div>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "");
+}]);
+
+angular.module("../app/scripts/partials/home.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("../app/scripts/partials/home.html",
+    "<div ui-view=\"header\"></div>\n" +
+    "<div ui-view=\"image-banner\"></div>\n" +
+    "<div ui-view=\"services\"></div>\n" +
+    "<div ui-view=\"contact-us\"></div>\n" +
+    "<div ui-view=\"\"></div>\n" +
+    "");
+}]);
+
+angular.module("../app/scripts/partials/image-banner.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("../app/scripts/partials/image-banner.html",
+    "<div slick dots=true infinite=true speed=300 slides-to-show=1 touch-move=true slides-to-scroll=1>\n" +
+    "    <div ng-repeat=\"image in images\">\n" +
+    "      <div class=\"layer\">\n" +
+    "        <div class=\"green mask\">  </div>\n" +
+    "        <img ng-src=\"{{image.src}}\" class=\"img-responsive\" alt=\"\">\n" +
+    "        <h4 ng-bind=\"image.header\"></h4>\n" +
+    "        <p ng-bind=\"image.description\"></p>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "");
+}]);
+
+angular.module("../app/scripts/partials/services.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("../app/scripts/partials/services.html",
+    "<div class=\"container\">\n" +
+    "<div class=\"row\">\n" +
+    "  <h3>Our Services</h3>\n" +
+    "  <div class=\"col-md-6 flushed\">\n" +
+    "    <h5 class=\"white\">Surveillance Systems</h5>\n" +
+    "    <div class=\"layer\">\n" +
+    "      <div class=\"mask red\"></div>\n" +
+    "      <img class=\"img-responsive\" src=\"\" alt=\"\">\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"col-md-6 flushed\">\n" +
+    "    <h5 class=\"white\">ICT Hardware and Software solutions</h5>\n" +
+    "    <div class=\"layer\">\n" +
+    "      <div class=\"mask blue\"></div>\n" +
+    "      <img class=\"img-responsive\" src=\"\" alt=\"\">\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"col-md-6 flushed\">\n" +
+    "    <h5 class=\"white\">Structured cabling & Office networks</h5>\n" +
+    "    <div class=\"layer\">\n" +
+    "      <div class=\"mask red\"></div>\n" +
+    "      <img class=\"img-responsive\" src=\"\" alt=\"\">\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"col-md-6 flushed\">\n" +
+    "    <h5 class=\"white\">ICT systems support & management</h5>\n" +
+    "    <div class=\"layer\">\n" +
+    "      <div class=\"mask blue\"></div>\n" +
+    "      <img class=\"img-responsive\" src=\"\" alt=\"\">\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"col-md-12 flushed\">\n" +
+    "    <h5 class=\"white\">Internet Services (Fiber and WIFI)</h5>\n" +
+    "    <div class=\"layer\">\n" +
+    "      <div class=\"mask red\"></div>\n" +
+    "      <img class=\"img-responsive\" src=\"\" alt=\"\">\n" +
+    "    </div>\n" +
+    "    <div style=\"width:30%;margin:auto\">\n" +
+    "      <button class=\"btn btn-large btn-default centered\">Get Our Brochure</button>\n" +
+    "    </div>\n" +
+    "\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "");
+}]);
